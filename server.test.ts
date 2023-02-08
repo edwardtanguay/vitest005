@@ -5,4 +5,5 @@ import app from './src/app.js';
 test('if the base route works as expected', async () => {
 	const response = await request(app).get('/');
 	expect(response.statusCode).toBe(200);
+	expect(response.text.length).toBeGreaterThan(250);
 });
